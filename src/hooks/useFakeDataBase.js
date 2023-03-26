@@ -52,12 +52,7 @@ const initialState = {
 
 const useFakeDataBase = () => {
   const [cartItems, setCartItems] = useState(initialState);
-  //const [products, setProducts] = useState(fakeProductsDB);
   const products = fakeProductsDB;
-
-  useEffect(() => {
-    console.log("carItems Changed>>", cartItems);
-  });
 
   const getCurrentTotal = () =>
     cartItems.items.reduce((accumulator, currentValue) => {
